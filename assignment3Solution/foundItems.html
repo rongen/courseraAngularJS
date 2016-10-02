@@ -1,0 +1,7 @@
+<div ng-if="narrow.flag" class="error">{{narrow.message}}</div>
+  <div ng-repeat="item in narrow.found track by $index">
+    {{item.name}}, {{item.short_name}}, {{item.description}}
+    <button class="btn btn-info" ng-click="narrow.onRemove({index: $index});">
+    Don't want this one!
+    </button>
+  </div>
